@@ -1,0 +1,145 @@
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.bg-blacks {
+  display: block !important;
+}
+
+.text-box-center {
+  top: 70% !important;
+  text-align: center;
+  color: rgb(130, 0, 0);
+}
+
+.img-center {
+  display: block;
+  margin: auto;
+}
+
+.div-center {
+  display: block;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  margin-left: 10%;
+}
+
+.swing {
+  animation: swing ease-in-out 2s infinite alternate;
+  transform-origin: center -20px;
+  float: left;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.swing img {
+  border: 5px solid #f8f8f8;
+  display: block;
+}
+.swing:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999;
+  top: -10px;
+  left: 50%;
+  z-index: 0;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(45deg);
+}
+/* nail */
+.swing:before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: -14px;
+  left: 54%;
+  z-index: 5;
+  border-radius: 50% 50%;
+  background: #000;
+}
+
+.heading span {
+  font-size: 3.5rem;
+  background: rgba(255, 165, 0, 0.2);
+  color: orange;
+  border-radius: 0.5rem;
+  padding: 0.2rem 1rem;
+  margin: 0.1rem;
+}
+
+.heading span.space {
+  background: none;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(-40deg);
+  }
+}
+
+.slider-height {
+  height: 600px;
+}
+
+.img-height {
+  height: 150px !important;
+  width: 200px !important;
+}
+
+.cat-img {
+  height: 400px;
+}
+
+.card-hover {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  z-index: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .slider-height {
+    height: 300px;
+  }
+  .cat-img {
+    height: 300px;
+  }
+
+  .text-box-center {
+    top: 50% !important;
+  }
+
+  .img-height {
+    height: 120px !important;
+    width: 150px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider-height {
+    height: 400px;
+  }
+  .cat-img {
+    height: 200px;
+  }
+  .text-box-center {
+    top: 50% !important;
+  }
+  .img-height {
+    height: 100px !important;
+    width: 100px !important;
+  }
+}

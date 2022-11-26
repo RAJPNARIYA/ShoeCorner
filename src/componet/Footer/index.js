@@ -4,7 +4,7 @@ function Footer() {
             
 
                 <div className="row bg-dark mt-3">
-                    <div className="col-2 m-3" style={{textAlign:"justify"}}>
+                    <div className="col-2 m-3 text-justify">
                         <h5 className="text-white">About Shop</h5>
                         <hr className="text-white"></hr>
                         <p className="text-muted">We possess within us two minds. So far I have written only of the conscious mind.We further know that the subconscious has recorded every event. This is just perfect theme.</p>
@@ -17,7 +17,7 @@ function Footer() {
                         </ul> */}
                     </div>
 
-                    <div className="col-2 m-3 " style={{textAlign:"justify"}}>
+                    <div className="col-2 m-3 text-justify">
                         <h5 className="text-white">INFORMATION</h5>
                         <hr className="text-white"></hr>
                         <ul className="nav flex-column">
@@ -29,7 +29,7 @@ function Footer() {
                         </ul>
                     </div>
 
-                    <div className="col-2 m-3" style={{textAlign:"justify"}}>
+                    <div className="col-2 m-3 text-justify">
                     <h5 className="text-white">MY ACCOUNT</h5>
                         <hr className="text-white"></hr>
                         <ul className="nav flex-column">

@@ -1,21 +1,34 @@
-import logo from '../Header/cosysLogo.png';
+import logo from "../Header/cosysLogo.png";
+import "../../asset/css/style.css";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+  NavLink,
+  Link,
+  Outlet,
+} from "react-router-dom";
+import Slider from "../Slider";
+import Footer from "../Footer";
+import About from "../About";
+import Navbar from "../Navbar";
+import App from "../../App";
 
 function Header() {
   return (
-    <div>
-    
-      {/* <nav aria-label="breadcrumb bg-dark mr-auto">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item"><a href="#">Library</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Data</li>
-        </ol>
-      </nav> */}
-
-
-
+    <>
+      {/* <Router>
+        <Routes>
+          <Route path={Header} element={<Header />} />
+          <Route path={Slider} element={<Slider />}>
+            <Route path={Footer} element={<Footer />} />
+          </Route>
+        </Routes>
+      </Router> */}
+      {/* <Router> */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
+        <div className="container">
           <a className="navbar-brand" href="#">
             <img src={logo} height="50px" width="300px" />
           </a>
@@ -30,14 +43,37 @@ function Header() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                {/* <Link className="nav-link active" aria-current="page" to="/">
                   Home
-                </a>
+                </Link> */}
+
+                <Link className="nav-link" to="home">
+                  Home
+                </Link>
+
+                {/* <Link className="nav-link active" to="/Slider/Footer">
+                  SF
+                </Link> */}
               </li>
-             
+
+              <li className="nav-item">
+                {/* <Link className="nav-link active" aria-current="page" to="/">
+                  Home
+                </Link> */}
+
+                <Link className="nav-link" to="about">
+                  About us
+                </Link>
+
+                {/* <Link className="nav-link active" to="/Slider/Footer">
+                  SF
+                </Link> */}
+              </li>
+
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -51,6 +87,9 @@ function Header() {
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
+                    {/* <Link className="dropdown-item" to="/MenCasualShoe">
+                      Men's Casual Shoes
+                    </Link> */}
                     <a className="dropdown-item" href="#">
                       Men's Casual Shoes
                     </a>
@@ -97,10 +136,14 @@ function Header() {
                   </li>
                 </ul>
               </li>
-             
             </ul>
             <form className="d-flex">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
               <button className="btn btn-outline-success" type="submit">
                 Search
               </button>
@@ -108,8 +151,9 @@ function Header() {
           </div>
         </div>
       </nav>
-    </div>
+      {/* </Router> */}
+    </>
   );
 }
 
-export default Header
+export default Header;
